@@ -1,10 +1,9 @@
-import { formatDate } from "../../helpers/formatDate";
 import styles from './styles.module.css';
 
 
 const Skeleton = ({count=1, type="banner"})=>{
     return <>
-{count > 1 ? (
+    {count > 1 ? (
         <ul className={styles.list}>
           {[...Array(count)].map((_, index) => (
             <li
@@ -15,7 +14,7 @@ const Skeleton = ({count=1, type="banner"})=>{
         </ul>
       ) : (
         <li className={type === "banner" ? styles.banner : styles.item}></li>
-      )}
+    )}
            </>
 }
 
